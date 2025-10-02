@@ -1,6 +1,23 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import {
+    Mail,
+    Phone,
+    Github,
+    Linkedin,
+    Facebook,
+    Instagram,
+    MapPin,
+    ArrowUp,
+    Monitor,
+    Server,
+    Settings,
+    Hotel,
+    Stethoscope,
+    Fish,
+    BookOpen
+} from 'lucide-react';
 
 export default function Home() {
     const [activeSection, setActiveSection] = useState('home');
@@ -106,9 +123,7 @@ export default function Home() {
                 onClick={scrollToTop}
                 title="Back to Top"
             >
-                <svg className="w-6 h-6" style={{color: '#01303f'}} fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
+                <ArrowUp className="w-6 h-6" style={{color: '#01303f'}} />
             </div>
 
             {/* Hero Section */}
@@ -155,7 +170,7 @@ export default function Home() {
                         <div className="glass rounded-2xl p-8 project-card slide-in-left">
                             <div className="flex items-center mb-4">
                                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb)'}}>
-                                    🏨
+                                    <Hotel className="w-6 h-6" style={{color: '#01303f'}} />
                                 </div>
                                 <h3 className="text-2xl font-bold" style={{color: '#02a9f7'}}>Hotel Booking Website</h3>
                             </div>
@@ -182,7 +197,7 @@ export default function Home() {
                         <div className="glass rounded-2xl p-8 project-card slide-in-right">
                             <div className="flex items-center mb-4">
                                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)'}}>
-                                    🏥
+                                    <Stethoscope className="w-6 h-6" style={{color: '#01303f'}} />
                                 </div>
                                 <h3 className="text-2xl font-bold" style={{color: '#89d6fb'}}>Doctor Appointment System</h3>
                             </div>
@@ -209,7 +224,7 @@ export default function Home() {
                         <div className="glass rounded-2xl p-8 project-card slide-in-left">
                             <div className="flex items-center mb-4">
                                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{background: 'linear-gradient(135deg, #02577a, #02a9f7)'}}>
-                                    🐟
+                                    <Fish className="w-6 h-6" style={{color: '#d4f0fc'}} />
                                 </div>
                                 <h3 className="text-2xl font-bold" style={{color: '#02a9f7'}}>WebCaKoi Platform</h3>
                             </div>
@@ -236,7 +251,7 @@ export default function Home() {
                         <div className="glass rounded-2xl p-8 project-card slide-in-right">
                             <div className="flex items-center mb-4">
                                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)'}}>
-                                    📚
+                                    <BookOpen className="w-6 h-6" style={{color: '#01303f'}} />
                                 </div>
                                 <h3 className="text-2xl font-bold" style={{color: '#89d6fb'}}>English Courses Platform</h3>
                             </div>
@@ -271,7 +286,7 @@ export default function Home() {
                     <div className="grid md:grid-cols-3 gap-8">
                         <div className="glass rounded-2xl p-8 slide-in-left">
                             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb)'}}>
-                                💻
+                                <Monitor className="w-8 h-8" style={{color: '#01303f'}} />
                             </div>
                             <h3 className="text-2xl font-bold mb-6" style={{color: '#02a9f7'}}>Frontend</h3>
                             <div className="flex flex-wrap gap-3 justify-center">
@@ -285,7 +300,7 @@ export default function Home() {
                         </div>
                         <div className="glass rounded-2xl p-8 fade-in">
                             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)'}}>
-                                ⚙️
+                                <Server className="w-8 h-8" style={{color: '#01303f'}} />
                             </div>
                             <h3 className="text-2xl font-bold mb-6" style={{color: '#89d6fb'}}>Backend</h3>
                             <div className="flex flex-wrap gap-3 justify-center">
@@ -297,7 +312,7 @@ export default function Home() {
                         </div>
                         <div className="glass rounded-2xl p-8 slide-in-right">
                             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{background: 'linear-gradient(135deg, #02577a, #89d6fb)'}}>
-                                🛠️
+                                <Settings className="w-8 h-8" style={{color: '#d4f0fc'}} />
                             </div>
                             <h3 className="text-2xl font-bold mb-6" style={{color: '#02a9f7'}}>Tools</h3>
                             <div className="flex flex-wrap gap-3 justify-center">
@@ -325,49 +340,63 @@ export default function Home() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                         <a href="mailto:chauthinh204@gmail.com"
                            className="glass rounded-2xl p-8 transition-all duration-300 transform hover:scale-105 project-card slide-in-left">
-                            <div className="text-4xl mb-4">📧</div>
+                            <div className="flex justify-center mb-4">
+                                <Mail className="w-10 h-10" style={{color: '#02a9f7'}} />
+                            </div>
                             <h3 className="text-xl font-semibold mb-2" style={{color: '#02a9f7'}}>Email</h3>
                             <p style={{color: '#d4f0fc'}}>chauthinh204@gmail.com</p>
                         </a>
 
                         <a href="tel:+84908971405"
                            className="glass rounded-2xl p-8 transition-all duration-300 transform hover:scale-105 project-card fade-in">
-                            <div className="text-4xl mb-4">📱</div>
+                            <div className="flex justify-center mb-4">
+                                <Phone className="w-10 h-10" style={{color: '#89d6fb'}} />
+                            </div>
                             <h3 className="text-xl font-semibold mb-2" style={{color: '#89d6fb'}}>Phone</h3>
                             <p style={{color: '#d4f0fc'}}>+84 908 971 405</p>
                         </a>
 
                         <a href="https://github.com/JayT02z" target="_blank" rel="noopener noreferrer"
                            className="glass rounded-2xl p-8 transition-all duration-300 transform hover:scale-105 project-card slide-in-right">
-                            <div className="text-4xl mb-4">💻</div>
+                            <div className="flex justify-center mb-4">
+                                <Github className="w-10 h-10" style={{color: '#02a9f7'}} />
+                            </div>
                             <h3 className="text-xl font-semibold mb-2" style={{color: '#02a9f7'}}>GitHub</h3>
                             <p style={{color: '#d4f0fc'}}>@JayT02z</p>
                         </a>
 
                         <a href="https://lnk.ink/OEPaz" target="_blank" rel="noopener noreferrer"
                            className="glass rounded-2xl p-8 transition-all duration-300 transform hover:scale-105 project-card slide-in-left">
-                            <div className="text-4xl mb-4">💼</div>
+                            <div className="flex justify-center mb-4">
+                                <Linkedin className="w-10 h-10" style={{color: '#89d6fb'}} />
+                            </div>
                             <h3 className="text-xl font-semibold mb-2" style={{color: '#89d6fb'}}>LinkedIn</h3>
                             <p style={{color: '#d4f0fc'}}>Professional Profile</p>
                         </a>
 
                         <a href="https://www.facebook.com/cdt2004" target="_blank" rel="noopener noreferrer"
                            className="glass rounded-2xl p-8 transition-all duration-300 transform hover:scale-105 project-card fade-in">
-                            <div className="text-4xl mb-4">📘</div>
+                            <div className="flex justify-center mb-4">
+                                <Facebook className="w-10 h-10" style={{color: '#02a9f7'}} />
+                            </div>
                             <h3 className="text-xl font-semibold mb-2" style={{color: '#02a9f7'}}>Facebook</h3>
                             <p style={{color: '#d4f0fc'}}>@cdt2004</p>
                         </a>
 
                         <a href="https://www.instagram.com/jtsc204t/" target="_blank" rel="noopener noreferrer"
                            className="glass rounded-2xl p-8 transition-all duration-300 transform hover:scale-105 project-card slide-in-right">
-                            <div className="text-4xl mb-4">📸</div>
+                            <div className="flex justify-center mb-4">
+                                <Instagram className="w-10 h-10" style={{color: '#89d6fb'}} />
+                            </div>
                             <h3 className="text-xl font-semibold mb-2" style={{color: '#89d6fb'}}>Instagram</h3>
                             <p style={{color: '#d4f0fc'}}>@jtsc204t</p>
                         </a>
                     </div>
 
                     <div className="glass rounded-2xl p-8 max-w-md mx-auto fade-in">
-                        <div className="text-4xl mb-4">📍</div>
+                        <div className="flex justify-center mb-4">
+                            <MapPin className="w-10 h-10" style={{color: '#02a9f7'}} />
+                        </div>
                         <h3 className="text-xl font-semibold mb-2" style={{color: '#02a9f7'}}>Location</h3>
                         <p style={{color: '#d4f0fc'}}>Binh Tan District, Ho Chi Minh City, Vietnam</p>
                     </div>
