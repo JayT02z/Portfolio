@@ -12,12 +12,10 @@ import {
     ArrowUp,
     Monitor,
     Server,
-    Settings,
     Hotel,
-    Stethoscope,
-    Fish,
-    BookOpen
+    Settings
 } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Home() {
     const [activeSection, setActiveSection] = useState('home');
@@ -179,10 +177,10 @@ export default function Home() {
                                 and user authentication. Built with modern web technologies for seamless user experience.
                             </p>
                             <div className="flex flex-wrap gap-2 mb-6">
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb)', color: '#01303f'}}>React</span>
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02577a, #02a9f7)', color: '#d4f0fc'}}>Node.js</span>
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)', color: '#01303f'}}>MongoDB</span>
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02a9f7, #02577a)', color: '#d4f0fc'}}>Express</span>
+                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb)', color: '#01303f'}}>HTML</span>
+                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02577a, #02a9f7)', color: '#d4f0fc'}}>CSS</span>
+                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)', color: '#01303f'}}>PHP</span>
+                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02a9f7, #02577a)', color: '#d4f0fc'}}>Laravel</span>
                             </div>
                             <a href="https://github.com/Kinn-max/web-booking-hotel" target="_blank" rel="noopener noreferrer"
                                className="inline-flex items-center transition-colors font-semibold group" style={{color: '#02a9f7'}}>
@@ -195,9 +193,14 @@ export default function Home() {
 
                         {/* Doctor Appointment Project */}
                         <div className="glass rounded-2xl p-8 project-card slide-in-right">
-                            <div className="flex items-center mb-4">
-                                <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)'}}>
-                                    <Stethoscope className="w-6 h-6" style={{color: '#01303f'}} />
+                            <div className="mb-6">
+                                <div className="w-full h-48 rounded-xl overflow-hidden mb-4 relative">
+                                    <Image
+                                        src="/WebDABS.png"
+                                        alt="Doctor Appointment Booking System"
+                                        fill
+                                        className="object-cover"
+                                    />
                                 </div>
                                 <h3 className="text-2xl font-bold" style={{color: '#89d6fb'}}>Doctor Appointment System</h3>
                             </div>
@@ -208,7 +211,7 @@ export default function Home() {
                             <div className="flex flex-wrap gap-2 mb-6">
                                 <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb)', color: '#01303f'}}>React</span>
                                 <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)', color: '#01303f'}}>JavaScript</span>
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02577a, #02a9f7)', color: '#d4f0fc'}}>Firebase</span>
+                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02577a, #02a9f7)', color: '#d4f0fc'}}>Java</span>
                                 <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb)', color: '#01303f'}}>Tailwind CSS</span>
                             </div>
                             <a href="https://github.com/JayT02z/Doctor-Appointment-Booking-System" target="_blank" rel="noopener noreferrer"
@@ -222,9 +225,14 @@ export default function Home() {
 
                         {/* Koi Fish Website */}
                         <div className="glass rounded-2xl p-8 project-card slide-in-left">
-                            <div className="flex items-center mb-4">
-                                <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{background: 'linear-gradient(135deg, #02577a, #02a9f7)'}}>
-                                    <Fish className="w-6 h-6" style={{color: '#d4f0fc'}} />
+                            <div className="mb-6">
+                                <div className="w-full h-48 rounded-xl overflow-hidden mb-4 relative">
+                                    <Image
+                                        src="/WebKoi.png"
+                                        alt="WebCaKoi Platform"
+                                        fill
+                                        className="object-cover"
+                                    />
                                 </div>
                                 <h3 className="text-2xl font-bold" style={{color: '#02a9f7'}}>WebCaKoi Platform</h3>
                             </div>
@@ -236,7 +244,7 @@ export default function Home() {
                                 <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)', color: '#01303f'}}>HTML5</span>
                                 <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb)', color: '#01303f'}}>CSS3</span>
                                 <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #d4f0fc, #89d6fb)', color: '#01303f'}}>JavaScript</span>
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02577a, #02a9f7)', color: '#d4f0fc'}}>Responsive Design</span>
+                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02577a, #02a9f7)', color: '#d4f0fc'}}>ReactJS</span>
                             </div>
                             <a href="https://github.com/JayT02z/WebCaKoi" target="_blank" rel="noopener noreferrer"
                                className="inline-flex items-center transition-colors font-semibold group" style={{color: '#02a9f7'}}>
@@ -249,9 +257,14 @@ export default function Home() {
 
                         {/* English Courses Project */}
                         <div className="glass rounded-2xl p-8 project-card slide-in-right">
-                            <div className="flex items-center mb-4">
-                                <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)'}}>
-                                    <BookOpen className="w-6 h-6" style={{color: '#01303f'}} />
+                            <div className="mb-6">
+                                <div className="w-full h-48 rounded-xl overflow-hidden mb-4 relative">
+                                    <Image
+                                        src="/WebCourse.png"
+                                        alt="English Courses Platform"
+                                        fill
+                                        className="object-cover"
+                                    />
                                 </div>
                                 <h3 className="text-2xl font-bold" style={{color: '#89d6fb'}}>English Courses Platform</h3>
                             </div>
@@ -261,9 +274,9 @@ export default function Home() {
                             </p>
                             <div className="flex flex-wrap gap-2 mb-6">
                                 <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb)', color: '#01303f'}}>React</span>
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02577a, #02a9f7)', color: '#d4f0fc'}}>Node.js</span>
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)', color: '#01303f'}}>Database</span>
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02a9f7, #02577a)', color: '#d4f0fc'}}>Education Tech</span>
+                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02577a, #02a9f7)', color: '#d4f0fc'}}>Tailwind CSS</span>
+                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)', color: '#01303f'}}>Java</span>
+                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium" style={{background: 'linear-gradient(135deg, #02a9f7, #02577a)', color: '#d4f0fc'}}>SpringBoot</span>
                             </div>
                             <a href="https://github.com/Newbie1402/CoursesEnglish" target="_blank" rel="noopener noreferrer"
                                className="inline-flex items-center transition-colors font-semibold group" style={{color: '#89d6fb'}}>
@@ -283,7 +296,7 @@ export default function Home() {
                     <h2 className="text-5xl font-bold mb-16 fade-in" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb, #d4f0fc)', WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
                         Technical Skills
                     </h2>
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 gap-8">
                         <div className="glass rounded-2xl p-8 slide-in-left">
                             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb)'}}>
                                 <Monitor className="w-8 h-8" style={{color: '#01303f'}} />
@@ -298,18 +311,6 @@ export default function Home() {
                                 <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium shadow-lg" style={{background: 'linear-gradient(135deg, #89d6fb, #02a9f7)', color: '#01303f'}}>Tailwind CSS</span>
                             </div>
                         </div>
-                        <div className="glass rounded-2xl p-8 fade-in">
-                            <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)'}}>
-                                <Server className="w-8 h-8" style={{color: '#01303f'}} />
-                            </div>
-                            <h3 className="text-2xl font-bold mb-6" style={{color: '#89d6fb'}}>Backend</h3>
-                            <div className="flex flex-wrap gap-3 justify-center">
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium shadow-lg" style={{background: 'linear-gradient(135deg, #02577a, #02a9f7)', color: '#d4f0fc'}}>Node.js</span>
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium shadow-lg" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb)', color: '#01303f'}}>Express</span>
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium shadow-lg" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)', color: '#01303f'}}>Firebase</span>
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium shadow-lg" style={{background: 'linear-gradient(135deg, #02a9f7, #02577a)', color: '#d4f0fc'}}>MongoDB</span>
-                            </div>
-                        </div>
                         <div className="glass rounded-2xl p-8 slide-in-right">
                             <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{background: 'linear-gradient(135deg, #02577a, #89d6fb)'}}>
                                 <Settings className="w-8 h-8" style={{color: '#d4f0fc'}} />
@@ -318,7 +319,7 @@ export default function Home() {
                             <div className="flex flex-wrap gap-3 justify-center">
                                 <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium shadow-lg" style={{background: 'linear-gradient(135deg, #d4f0fc, #89d6fb)', color: '#01303f'}}>Git</span>
                                 <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium shadow-lg" style={{background: 'linear-gradient(135deg, #02577a, #02a9f7)', color: '#d4f0fc'}}>GitHub</span>
-                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium shadow-lg" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb)', color: '#01303f'}}>VS Code</span>
+                                <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium shadow-lg" style={{background: 'linear-gradient(135deg, #02a9f7, #89d6fb)', color: '#01303f'}}>JetBrains</span>
                                 <span className="px-4 py-2 text-sm rounded-full skill-badge font-medium shadow-lg" style={{background: 'linear-gradient(135deg, #89d6fb, #d4f0fc)', color: '#01303f'}}>Responsive Design</span>
                             </div>
                         </div>
